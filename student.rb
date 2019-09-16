@@ -21,4 +21,8 @@ class Student
     @cohort = new_cohort
   end
 
+  def talk()
+    returns "I can talk!"
+  end
+
 end
