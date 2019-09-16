@@ -48,13 +48,20 @@ class TestTeam < MiniTest::Test
 
   def test_result_points_add__win_add_3
     sports_team = Team.new("Watford",["Gomez", "Sarr"],"Flores")
-    sports_team.results_points_add("win")
+    sports_team.result_points_add("win")
     assert_equal(3, sports_team.points())
   end
 
   def test_result_points_add__lose_add_0
     sports_team = Team.new("Watford",["Gomez", "Sarr"],"Flores")
-    sports_team.results_points_add("lose")
+    sports_team.result_points_add("lose")
     assert_equal(0, sports_team.points())
   end
+
+  def test_result_points_add__draw_add_1
+    sports_team = Team.new("Watford",["Gomez", "Sarr"],"Flores")
+    sports_team.result_points_add("draw")
+    assert_equal(1, sports_team.points())
+  end
+
 end

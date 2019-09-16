@@ -18,4 +18,13 @@ class Team
       return @players.include?(player_to_find)
   end
 
+  def result_points_add(result)
+      team_result = {
+        "win" => 3,
+        "lose" => 0,
+        "draw" => 1
+      }
+      @points += team_result[result]
+  end
+
 end
