@@ -31,4 +31,9 @@ class TestStudentClass < MiniTest::Test
     assert_equal("I can talk!", codeclan_student.talk())
   end
 
+  def test_say_favourite_language__ruby_returns_i_love_ruby
+    codeclan_student = Student.new("Mark", "E34")
+    assert_equal("I love Ruby!", codeclan_student.say_favourite_language("Ruby"))
+  end
+
 end

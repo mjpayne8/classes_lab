@@ -22,7 +22,7 @@ class Student
   end
 
   def talk()
-    returns "I can talk!"
+    return "I can talk!"
   end
 
 end
