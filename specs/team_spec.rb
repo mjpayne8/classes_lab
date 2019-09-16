@@ -36,7 +36,7 @@ class TestTeam < MiniTest::Test
     assert_equal(true, sports_team.player_in_team("Gomez"))
   end
 
-  def test_player_in_team__gomez_returns_true
+  def test_player_in_team__foster_returns_false
     sports_team = Team.new("Watford",["Gomez", "Sarr"],"Flores")
     assert_equal(false, sports_team.player_in_team("Foster"))
   end
